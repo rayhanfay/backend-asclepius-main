@@ -53,11 +53,11 @@ To deploy the application on Google Cloud Run, follow these steps:
 4. **Deploy to Cloud Run**:
    ```bash
    gcloud run deploy backend-api \
-  --image gcr.io/YOUR_PROJECT_ID/backend-api \
-  --platform managed \
-  --region asia-southeast2 \
-  --allow-unauthenticated \
-  --timeout=300s
+   --image gcr.io/YOUR_PROJECT_ID/backend-api \
+   --platform managed \
+   --region asia-southeast2 \
+   --allow-unauthenticated \
+   --timeout=300s
 
 ## 📋 API Endpoints
 
