@@ -1,19 +1,6 @@
 # Backend API for Cancer Prediction
 
 Welcome to the **Cancer Prediction API**, a backend service designed to perform image classification using TensorFlow and store prediction results in Google Firestore. The API supports both real-time predictions and a history retrieval feature. It's deployed on Google Cloud Run, ensuring scalability and reliability.
-
-## Table of Contents
-1. [Overview](#overview)
-2. [Features](#features)
-3. [Technology Stack](#technology-stack)
-4. [Setup and Installation](#setup-and-installation)
-5. [Running Locally](#running-locally)
-6. [Deployment](#deployment)
-7. [Endpoints](#endpoints)
-8. [Environment Variables](#environment-variables)
-9. [Error Handling](#error-handling)
-10. [Future Improvements](#future-improvements)
-
 ---
 
 ## Overview
@@ -69,6 +56,20 @@ This API predicts whether an uploaded image indicates cancerous or non-cancerous
     1. **Build Docker Image**:
      ```bash
      docker build -t backend-api .
+     ### Tag the Docker Image
+      ```bash
+      docker tag backend-api gcr.io/YOUR_PROJECT_ID/backend-api
+     ### Push the Image to Google Container Registry
+      ```bash
+      docker push gcr.io/YOUR_PROJECT_ID/backend-api
+     ### Deploy the Container to Google Cloud Run
+      ```bash
+   gcloud run deploy backend-api \
+     --image gcr.io/YOUR_PROJECT_ID/backend-api \
+     --platform managed \
+     --region asia-southeast2 \
+     --allow-unauthenticated \
+     --timeout=300s
 
 
    
