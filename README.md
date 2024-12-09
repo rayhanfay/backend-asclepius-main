@@ -1,13 +1,12 @@
-# Cancer Prediction API 🚀
+# Cancer Prediction API 
 Welcome to the **Cancer Prediction API**, a backend service designed for image classification using TensorFlow and integrated with Google Firestore to store prediction histories. Deployed on Google Cloud Run, this API provides reliable real-time cancer detection.
 
-## 🌟 Features
+## Features
 - **Image Classification**: Detects if uploaded images are cancerous or non-cancerous using a TensorFlow model.
 - **Firestore Integration**: Stores each prediction's result, timestamp, and suggestions for easy retrieval.
-- **Health Check**: Configured for reliability in Cloud Run.
 - **Error Handling**: Provides detailed feedback on errors for better usability.
 
-## 💻 Technology Stack
+## Technology Stack
 - **Node.js**: Backend runtime environment.
 - **Hapi.js**: RESTful API framework.
 - **TensorFlow.js**: For image classification and inference.
@@ -15,7 +14,7 @@ Welcome to the **Cancer Prediction API**, a backend service designed for image c
 - **Google Cloud Run**: Scalable containerized deployment.
 - **Docker**: For containerization and easy deployment.
 
-## 🛠️ Installation & Setup
+## Installation & Setup
 
 ### Prerequisites
 - **Node.js** (v18+)
@@ -36,7 +35,7 @@ Welcome to the **Cancer Prediction API**, a backend service designed for image c
    ```bash
    npm start
 
-## 🚀 Deploying on Google Cloud Run
+## Deploying on Google Cloud Run
 To deploy the application on Google Cloud Run, follow these steps:
 1. **Build Docker Image**:
    ```bash
@@ -59,7 +58,7 @@ To deploy the application on Google Cloud Run, follow these steps:
    --allow-unauthenticated \
    --timeout=300s
 
-## 📋 API Endpoints
+## API Endpoints
 
 ### 1. POST /predict
 
@@ -99,14 +98,9 @@ To deploy the application on Google Cloud Run, follow these steps:
     ]
   }
 
-## ⚙️ Environment Variables
+## Environment Variables
 
 - `PORT`: Server port number.
 - `MODEL_URL`: URL of the TensorFlow model in Google Cloud Storage.
 - `GOOGLE_APPLICATION_CREDENTIALS`: Path to the Firestore service account JSON.
 
-## 🚀 Future Improvements
-
-- **Model Optimization**: Enhance model accuracy.
-- **Detailed Error Feedback**: Provide better error messages for invalid image formats.
-- **Scalability**: Explore caching for frequently used predictions.
